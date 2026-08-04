@@ -7,7 +7,7 @@
                 </h1>
                 <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl">
                     Create flashcard decks for your classes, practice at your own pace, and keep your attention on learning.
-                    Flashcard is free with no ads.
+                    CogitoDeck is free with no ads.
                 </p>
 
              
