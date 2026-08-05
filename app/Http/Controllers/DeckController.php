@@ -62,7 +62,7 @@ class DeckController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Deck $deck): View
     {
         return view('decks.edit', [
             'deck' => $deck,

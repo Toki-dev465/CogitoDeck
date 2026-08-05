@@ -33,17 +33,17 @@
                 @foreach ($decks as $deck)
                     <div class="group rounded-2xl border border-base-300 bg-base-100 p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
                         <div class="flex items-start justify-between gap-4">
-                            <div>
-                                <h2 class="text-xl font-bold">
+                            <div class="min-w-0 flex-1">
+                                <h2 class="text-xl font-bold break-words">
                                     {{ $deck->title }}
                                 </h2>
 
-                                <p class="mt-2 text-sm text-base-content/70">
+                                <p class="mt-2 text-sm text-base-content/70 break-words">
                                     {{ $deck->description ?: 'No description added.' }}
                                 </p>
                             </div>
 
-                            <span class="badge badge-primary">
+                            <span class="badge badge-primary shrink-0 whitespace-nowrap">
                                 {{ $deck->cards_count }} cards
                             </span>
                         </div>

@@ -64,7 +64,7 @@ class FlashcardController extends Controller
 
         $flashcard->delete();
 
-        return redirect("/decks/{$flashcard->deckId}/study");
+        return redirect("/decks/{$deckId}/study");
     }
 
 
