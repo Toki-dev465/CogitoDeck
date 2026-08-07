@@ -13,6 +13,7 @@ class Flashcard extends Model
         'front_text',
         'front_image_path',
         'back_text',
+        'back_image_path',
     ];
 
 

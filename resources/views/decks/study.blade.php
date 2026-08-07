@@ -46,10 +46,21 @@
                                     </p>
                                 </div>
 
-                                <div class="flex flex-1 items-center justify-center px-4">
-                                    <p class="text-2xl font-bold">
-                                        {{ $card->front_text }}
-                                    </p>
+                                <div class="flex flex-1 flex-col items-center justify-center gap-6 overflow-y-auto px-4 text-center">
+                                    @if ($card->front_image_path)
+                                        <img
+                                            src="{{ asset('storage/' . $card->front_image_path) }}"
+                                            alt="Question image"
+                                            class="max-h-56 max-w-full rounded-xl object-contain shadow-sm"
+                                            loading="lazy"
+                                        >
+                                    @endif
+
+                                    @if (filled($card->front_text))
+                                        <p class="text-2xl font-bold">
+                                            {{ $card->front_text }}
+                                        </p>
+                                    @endif
                                 </div>
                             </div>
 
@@ -60,10 +71,21 @@
                                     </p>
                                 </div>
 
-                                <div class="flex flex-1 items-center justify-center px-4">
-                                    <p class="text-2xl font-bold">
-                                        {{ $card->back_text }}
-                                    </p>
+                                <div class="flex flex-1 flex-col items-center justify-center gap-6 overflow-y-auto px-4 text-center">
+                                    @if ($card->back_image_path)
+                                        <img
+                                            src="{{ asset('storage/' . $card->back_image_path) }}"
+                                            alt="Answer image"
+                                            class="max-h-56 max-w-full rounded-xl object-contain shadow-sm"
+                                            loading="lazy"
+                                        >
+                                    @endif
+
+                                    @if (filled($card->back_text))
+                                        <p class="text-2xl font-bold">
+                                            {{ $card->back_text }}
+                                        </p>
+                                    @endif
                                 </div>
                             </div>
                         </div>

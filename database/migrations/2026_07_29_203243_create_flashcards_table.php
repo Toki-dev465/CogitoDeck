@@ -16,10 +16,13 @@ return new class extends Migration
             $table->timestamps();
             $table->foreignId('deck_id')->constrained()->onDelete('cascade'); // Links to the deck
             $table->text('front_text')->nullable();
-            $table->string('front_image_path')->nullable(); // photos
             $table->text('back_text')->nullable();
+            
+            //photos
+            $table->string('front_image_path')->nullable();
+            $table->string('back_image_path')->nullable();
 
-            // spaced repetition data
+         
 
         
         
